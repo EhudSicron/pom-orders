@@ -111,4 +111,3 @@ Send me your feedback by opening an issue or reaching out directly.
 
 Connect with me on LinkedIn: https://www.linkedin.com/in/ehud-sicron/
 
-Learn more about automation: https://automation.co.il/
