@@ -1,0 +1,22 @@
+SETUP #####################  SETUP ###########
+start url
+/__w/pom-orders/pom-orders
+/__w/pom-orders/pom-orders/tests/config.ini
+Start test 3 - remove products
+https://www.saucedemo.com/inventory.html
+6
+Product name: Sauce Labs Bike Light
+https://www.saucedemo.com/inventory-item.html?id=0
+https://www.saucedemo.com/inventory-item.html?id=0
+6
+Product name: Sauce Labs Backpack
+https://www.saucedemo.com/inventory-item.html?id=4
+https://www.saucedemo.com/inventory-item.html?id=4
+2
+Sauce Labs Bike Light
+Sauce Labs Backpack
+Product name: Sauce Labs Backpack
+1
+Sauce Labs Bike Light
+Product name: Sauce Labs Bike Light
+End test 3 - remove products

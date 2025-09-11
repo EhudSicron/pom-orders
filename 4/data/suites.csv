@@ -1,0 +1,8 @@
+"DESCRIPTION","DURATION IN MS","NAME","PARENT SUITE","START TIME","STATUS","STOP TIME","SUB SUITE","SUITE","TEST CLASS","TEST METHOD"
+"","9340","test_3_remove[chromium]","tests","Thu Sep 11 16:37:44 UTC 2025","passed","Thu Sep 11 16:37:53 UTC 2025","Test_3_remove","test_3_remove","",""
+"","1920","test_02_login_fail[chromium-ehud-Sicron]","tests","Thu Sep 11 16:37:00 UTC 2025","passed","Thu Sep 11 16:37:02 UTC 2025","Test_1_login","test_1_login","",""
+"","7295","test_4_cancel[chromium]","tests","Thu Sep 11 16:37:56 UTC 2025","passed","Thu Sep 11 16:38:03 UTC 2025","Test_4_cancel","test_4_cancel","",""
+"","36353","test_2_add_2prod[chromium]","tests","Thu Sep 11 16:37:05 UTC 2025","broken","Thu Sep 11 16:37:41 UTC 2025","Test_2_add_2prod","test_2_add_2prod","",""
+"","16237","test_5_manu[chromium]","tests","Thu Sep 11 16:38:06 UTC 2025","passed","Thu Sep 11 16:38:22 UTC 2025","Test_5_manu","test_5_manu","",""
+"","1958","test_01_login_valid_user[chromium]","tests","Thu Sep 11 16:36:56 UTC 2025","passed","Thu Sep 11 16:36:58 UTC 2025","Test_1_login","test_1_login","",""
+"","1922","test_02_login_fail[chromium-standard_user-secret_sauce]","tests","Thu Sep 11 16:38:25 UTC 2025","failed","Thu Sep 11 16:38:26 UTC 2025","Test_1_login","test_1_login","",""

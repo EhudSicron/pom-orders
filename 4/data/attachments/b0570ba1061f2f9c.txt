@@ -1,0 +1,11 @@
+SETUP #####################  SETUP ###########
+start url
+/__w/pom-orders/pom-orders
+/__w/pom-orders/pom-orders/tests/config.ini
+Start test 2 - add 2 products
+https://www.saucedemo.com/inventory.html
+6
+Product name: Sauce Labs Bike Light
+https://www.saucedemo.com/inventory-item.html?id=0
+https://www.saucedemo.com/inventory-item.html?id=0
+0
