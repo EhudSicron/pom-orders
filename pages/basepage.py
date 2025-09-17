@@ -45,3 +45,25 @@ class BasePage:
         return text
     def page_name(self):
         return self.page.title()
+    def page_url(self):
+        print(f"page url")
+        print(f"page url{self.page.url}")
+        return self.page.url
+
+    def is_valid_float(self,s):
+        try:
+            # Attempt to convert the string to a float
+            float(s)
+            return True
+        except ValueError:
+            # If a ValueError is raised, the conversion failed
+            return False
+    def is_valid_int(self,s):
+        try:
+            # Attempt to convert the string to a float
+            int(s)
+            return True
+        except ValueError:
+            # If a ValueError is raised, the conversion failed
+            return False
+

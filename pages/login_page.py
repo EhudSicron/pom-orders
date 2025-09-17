@@ -16,9 +16,17 @@ class Login_page(Header_manu_cart):
         self.fill_text(self.__PASSWORD_FIELD, last_name)
         self.click(self.__LOGIN_FIELD)
     def error(self):
-        return self.get_text(self.__LOGIN_ERROR)
+        if self.page.locator(self.__LOGIN_ERROR).is_visible():
+            error = self.get_text(self.__LOGIN_ERROR)
+        else:
+            error = ""
+        return error
     def login_btn(self):
-        return self.get_text(self.__LOGIN_FIELD)
+        if self.page.locator(self.__LOGIN_FIELD).is_visible():
+             login_btn_text=self.get_text(self.__LOGIN_FIELD)
+        else:
+            login_btn_text=""
+        return login_btn_text
 
 
 
