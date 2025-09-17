@@ -1,114 +1,72 @@
-<div align="center">
-<img src="https://www.google.com/search?q=https://raw.githubusercontent.com/EhudSicron/pom-orders/main/images/project-banner.png" alt="Project Banner" width="700"/>
-<h1>POM-Orders: Enterprise-Grade Test Automation</h1>
-</div>
+This project includes 2 main folders:
+1.	Project Orders
+2.	Project Tasks
+testing the site http://www.saucedemo.com
+This was written by Playwright Object Oriented.
+All class pages are in classes directory.
+All tests’ files are in the test’s directory.
+Each test uses the methods from the relevant classes.
+All classes inherited from the Basepage class which had the basic Page functions
 
-<div align="center">
+Install requierments:
+pip install requierments
 
-</div>
+Install Allure
+1. Open powershell as adimn 
+2. Install scoop - used for installing Allure
+	"Invoke-Expression (New-Object System.Net.WebClient).DownloadString('https://get.scoop.sh')"
+3. Install Allure - "scoop install allure"
+4. Run Allure to display the allure-results reports - "allure serve allure-results"
+5. Running maualy click modify run configuration and go to Edit run configuration - In 'Additional arguments' enter "--alluredir=allure_results"
+6. Run tests
 
-🚀 Project Overview
-The POM-Orders project is a robust, scalable, and highly maintainable test automation framework built to showcase best practices in software quality assurance. Leveraging the powerful Page Object Model (POM) design pattern, this framework ensures that test code is modular, reusable, and easy to maintain, even as the application under test evolves.
+Runing 1 test with reports using treminal comand:
+1. In terminal run : "pytest allure serve allure-results test_file_name::test_class::test_fun"
+2. example: pytest --alluredir=allure_results test_2_add_2prod.py::Test_2_add_2prod::test_2_add_2prod
 
-This repository serves as a professional-grade example of a complete end-to-end testing solution, from writing efficient tests with Playwright and TypeScript to generating comprehensive reports with Allure Report and integrating with a continuous integration pipeline using GitHub Actions. It provides a blueprint for building a resilient automation system capable of handling complex web applications.
 
-🎯 Project Goals
-Create a Robust and Maintainable Framework: Implement a resilient test automation framework using the Page Object Model (POM) to separate test logic from page actions, ensuring a clean and scalable codebase.
+Install Chocolaty - tool to install Doker
+1. Open powershell as adimn 
+2. Run Get-ExecutionPolicy to verify admin prev
+3. Run  Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; iex ((New-Object System.Net.WebClient).DownloadString('https://community.chocolatey.org/install.ps1'))
+4. Run choco install docker-desktop
+5. Run "choco" to verify version  
 
-Enhance Code Readability and Reusability: Utilize TypeScript to provide static typing, improving code quality, readability, and the ability to detect issues early.
 
-Generate Insightful Test Reports: Leverage Allure Report to produce interactive and detailed test reports, offering a clear visual representation of test results, including logs, steps, and screenshots for every execution.
+Install Jenkins 
+1. Download https://www.jenkins.io/download/thank-you-downloading-windows-installer-stable/
+2. Run installtion, Select correct JAVA version (17-21)
+3. If not install - Go to https://www.oracle.com/java/technologies/javase/jdk21-archive-downloads.html
+4. Open Charome and go to "http://localhost:8080" jenkins setting
+5. Copy the PSW from the text file in the path
+6. Select Install suggested plugin
 
-Establish a CI/CD Pipeline: Integrate with GitHub Actions to automate the entire testing process, from code push to test execution and report deployment, guaranteeing continuous quality assurance.
 
-🛠️ Technologies Used
-This project is built with the following cutting-edge technologies:
 
-Playwright: The core automation framework for end-to-end testing, known for its speed, stability, and ability to run tests across all modern browsers.
 
-TypeScript: A statically-typed language that enhances code maintainability and developer experience.
 
-Node.js: The runtime environment for executing the automation scripts.
+# 1. Create a file called config.py
+# 2. Copy this code to the file (config.py)
+# 3. Call this function to get values from the config.ini file (Ex. user = ConfigReader.read_config('email', 'user'))
+import configparser
+import sys
 
-Allure Report: An open-source, multi-language test reporting tool that provides beautiful and informative reports.
 
-GitHub Actions: A powerful CI/CD platform for automating workflows directly within GitHub.
 
-⚙️ How to Install and Run
-To get this project running on your local machine, follow these steps:
+config file should be at the tests dir
+class ConfigReader:
 
-Clone the repository:
+    @staticmethod
+    def read_config(section, key):
+        root_dir = sys.path[0]
+        print("start url")
+        print(root_dir)
 
-git clone [https://github.com/EhudSicron/pom-orders.git](https://github.com/EhudSicron/pom-orders.git)
+        config = configparser.ConfigParser()
+        config.read(root_dir + '\config.ini')
 
-Navigate to the project directory:
-
-cd pom-orders
-
-Install project dependencies:
-
-npm install
-
-Run the test suite:
-
-npx playwright test
-
-This command executes the tests and generates the Allure Report data in the allure-results directory.
-
-Generate and view the Allure Report:
-To serve the report and open it in your browser, run:
-
-npx allure serve allure-results
-
-📁 Folder Structure
-The project's directory structure is designed for clarity and best practices:
-
-├── .github/
-│   └── workflows/
-│       └── main_workflow.yml     # GitHub Actions CI/CD workflow
-├── allure-report/                # Deployed Allure Report on GitHub Pages
-├── allure-results/               # Raw test results generated by Allure
-├── pages/                        # Page Object Model classes
-│   ├── HomePage.ts
-│   ├── LoginPage.ts
-│   └── PomOrdersPage.ts
-├── tests/                        # Test suite files
-│   └── test-pom-orders.spec.ts
-├── playwright.config.ts          # Playwright configuration
-├── package.json                  # Project metadata and dependencies
-└── README.md                     # The project README file
-
-🧪 What's Tested
-The test suite provides comprehensive coverage of the core functionalities of the "Pom-Orders" application, including:
-
-User Authentication: End-to-end validation of the login process with valid credentials.
-
-Dashboard Navigation: Verifying access and correct display of the main application dashboard.
-
-Order Management: Testing key features such as filtering, viewing, and interacting with orders.
-
-UI Component Integrity: Ensuring that all on-screen elements are functional, styled correctly, and behave as expected.
-
-📈 Reports & Continuous Integration
-This project is integrated with GitHub Actions to provide an automated CI/CD pipeline. Each push to the main branch triggers a full test suite run, and the results are automatically published to a professional-looking Allure Report hosted on GitHub Pages.
-
-Allure Report (Live): https://ehudsicron.github.io/pom-orders/
-
-<br>
-<div align="center">
-<img src="https://www.google.com/search?q=https://ehudsicron.github.io/pom-orders/img/allure_logo.svg" alt="Allure Report Logo" width="50" height="50">
-<br>
-<h4>Allure Report Screenshot</h4>
-
-</div>
-
-⭐ Get Involved
-If you're a fellow automation enthusiast or a company looking for a robust testing solution, this project is for you!
-
-Star this repo to show your support and help others discover it.
-
-Send me your feedback by opening an issue or reaching out directly.
-
-Connect with me on LinkedIn: https://www.linkedin.com/in/ehud-sicron/
-
-Learn more about automation: https://automation.co.il/
+        # Check that the Section & key exists
+        if config.has_section(section) and config.has_option(section, key):
+            return config[section][key]
+        else:
+            raise KeyError(f"Section '{section}' or key '{key}' not found in config.ini")
