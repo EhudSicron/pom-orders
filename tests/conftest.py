@@ -1,11 +1,7 @@
-import os
 from typing import Dict
 from time import sleep
-
-import allure
 import pytest
 from playwright.sync_api import Page
-from playwright.sync_api import sync_playwright
 
 from pages.cart_page import Cart_page
 from pages.checkout_overview_page import Checkout_overview_page
@@ -15,9 +11,6 @@ from pages.product_page import Product_page
 from pages.products_page import Products_page
 from tests.config import ConfigReader
 
-# 1. Declare the global variable at the top level
-#    This makes it accessible to all functions and hooks in this module.
-_browser_info = {}
 
 @pytest.fixture(scope="class")
 def setup_page_class(request, browser):
@@ -70,34 +63,3 @@ def setup_page_function(request, page: Page):
     request.cls.products_page = Products_page(page)
     yield
     sleep(2)
-
-
-@pytest.fixture(scope="session")
-def browser_info(browser):
-    """
-    Fixture to capture browser information and store it globally.
-    """
-    global _browser_info  # 2. Use 'global' keyword to modify the global variable
-
-    # Capture the browser name (e.g., 'Chromium', 'Firefox')
-    browser_type_name = browser.browser_type.name.capitalize()
-
-    # Capture the browser version
-    browser_version = browser.version
-
-    _browser_info = {
-        'browser': browser_type_name,
-        'driver_version': browser_version
-    }
-
-    yield
-
-def pytest_exception_interact(report):
-    if report.failed:
-        print("test fail going to take a screenshot")
-        sleep(0.5)
-        page1 = report.item.funcargs['page']
-        # print(f"page title {page1.}")
-        allure.attach(body=page1.screenshot(type="png"), name="screenshot",attachment_type=allure.attachment_type.PNG)
-
-
