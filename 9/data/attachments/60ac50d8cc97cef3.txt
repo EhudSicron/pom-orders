@@ -1,0 +1,29 @@
+SETUP #####################  SETUP ###########
+start url
+/__w/pom-orders/pom-orders
+/__w/pom-orders/pom-orders/tests/config.ini
+https://www.saucedemo.com/inventory.html
+page url
+page urlhttps://www.saucedemo.com/cart.html
+page url
+page urlhttps://www.saucedemo.com/checkout-step-one.html
+self.page_url: https://www.saucedemo.com/checkout-step-one.html
+page url
+page urlhttps://www.saucedemo.com/checkout-step-one.html
+https://www.saucedemo.com/checkout-step-one.html
+https://saucelabs.com/
+page url
+page urlhttps://saucelabs.com/
+https://www.saucedemo.com/checkout-step-one.html
+https://www.saucedemo.com/inventory.html
+page url
+page urlhttps://www.saucedemo.com/inventory.html
+page url
+page urlhttps://www.saucedemo.com/cart.html
+page url
+page urlhttps://www.saucedemo.com/checkout-step-one.html
+self.page_url: https://www.saucedemo.com/checkout-step-one.html
+page url
+page urlhttps://www.saucedemo.com/checkout-step-one.html
+https://www.saucedemo.com/checkout-step-one.html
+https://www.saucedemo.com/

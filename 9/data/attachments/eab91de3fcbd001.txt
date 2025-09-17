@@ -1,0 +1,9 @@
+SETUP #####################  SETUP ###########
+start url
+/__w/pom-orders/pom-orders
+/__w/pom-orders/pom-orders/tests/config.ini
+Start test 2 - login
+https://www.saucedemo.com/
+End test 2 - login
+User:ehud, Password: Sicron
+error:Epic sadface: Username and password do not match any user in this service
