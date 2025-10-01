@@ -96,7 +96,7 @@ Allure Report (Live): https://ehudsicron.github.io/pom-orders/
 
 <br>
 <div align="center">
-<img src="https://github.com/EhudSicron/pom-orders/blob/main/img/allure_logo.webp" alt="Allure Report Logo" width="50" height="50">
+<img src="https://github.com/EhudSicron/pom-orders/blob/main/img/allure_logo.png" alt="Allure Report Logo" width="50" height="50">
 <br>
 <h4>Allure Report Screenshot</h4>
 <img src="https://github.com/EhudSicron/pom-orders/blob/main/img/Allure_report.PNG" alt="Allure Report Screenshot" width="700"/>
@@ -113,6 +113,7 @@ Connect with me on LinkedIn: https://www.linkedin.com/in/ehud-sicron/
 
 
 Learn more about automation: https://automation.co.il/
+
 
 
 
