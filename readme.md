@@ -63,27 +63,40 @@ npx allure serve allure-results
 📁 Folder Structure
 The project's directory structure is designed for clarity and best practices:
 
-└───pom-orders-main
-    │   readme.md					          # The project README file
-    │   Readme.txt                  
-    │   requirements.txt			      # Project metadata and dependencies
-    ├───.github
-    │   └───workflows/
-	  │       └── main_workflow.yml   # GitHub Actions CI/CD workflow
-	  ├── allure-report/              # Deployed Allure Report on GitHub Pages
-    ├───img/
-    ├───pages/						          # Page Object Model classes
-    └───tests/						          # Test suite files
-	      │   basetest.py
-        │   config.ini
-        │   config.py
-        │   conftest.py				      # Pytest configuration
-        ├───cart/
-        ├───checkout/
-        ├───login/
-        ├───manu/
-        ├───product/
-        └───sort/
+<ul>
+  <li><strong>pom-orders-main/</strong>
+    <ul>
+      <li><strong>.github/</strong>
+        <ul>
+          <li><strong>workflows/</strong>
+            <ul>
+              <li>main_workflow.yml</li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+      <li><strong>allure-report/</strong></li>
+      <li><strong>img/</strong></li>
+      <li><strong>pages/</strong> </li>
+      <li><strong>tests/</strong> <ul>
+          <li><strong>cart/</strong></li>
+          <li><strong>checkout/</strong></li>
+          <li><strong>login/</strong></li>
+          <li><strong>manu/</strong></li>
+          <li><strong>product/</strong></li>
+          <li><strong>sort/</strong></li>
+          <li>basetest.py</li>
+          <li>config.ini</li>
+          <li>config.py</li>
+          <li>conftest.py </li>
+        </ul>
+      </li>
+      <li>readme.md </li>
+      <li>Readme.txt</li>
+      <li>requirements.txt </li>
+    </ul>
+  </li>
+</ul>
 
 🧪 What's Tested
 The test suite provides comprehensive coverage of the core functionalities of the "Pom-Orders" application, including:
@@ -120,6 +133,7 @@ Connect with me on LinkedIn: https://www.linkedin.com/in/ehud-sicron/
 
 
 Learn more about automation: https://automation.co.il/
+
 
 
 
