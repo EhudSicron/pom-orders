@@ -1,5 +1,5 @@
 <div align="center">
-<img src="https://www.google.com/search?q=https://raw.githubusercontent.com/EhudSicron/pom-orders/main/images/project-banner.png](https://github.com/EhudSicron/pom-orders/blob/main/project_pom_orders.png" alt="Project Banner" width="700"/>
+<img src="https://github.com/EhudSicron/pom-orders/blob/main/project_pom_orders.png" alt="Project Banner" width="700"/>
 <h1>POM-Orders: Enterprise-Grade Test Automation</h1>
 </div>
 
@@ -113,3 +113,4 @@ Connect with me on LinkedIn: https://www.linkedin.com/in/ehud-sicron/
 
 
 Learn more about automation: https://automation.co.il/
+
