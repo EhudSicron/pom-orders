@@ -1,5 +1,5 @@
 <div align="center">
-<img src="https://github.com/EhudSicron/pom-orders/blob/main/project_pom_orders.png" alt="Project Banner" width="700"/>
+<img src="https://github.com/EhudSicron/pom-orders/blob/main/img/project_pom_orders.png" alt="Project Banner" width="700"/>
 <h1>POM-Orders: Enterprise-Grade Test Automation</h1>
 </div>
 
@@ -96,10 +96,10 @@ Allure Report (Live): https://ehudsicron.github.io/pom-orders/
 
 <br>
 <div align="center">
-<img src="https://www.google.com/search?q=https://ehudsicron.github.io/pom-orders/img/allure_logo.webp" alt="Allure Report Logo" width="50" height="50">
+<img src="https://github.com/EhudSicron/pom-orders/blob/main/img/allure_logo.webp" alt="Allure Report Logo" width="50" height="50">
 <br>
 <h4>Allure Report Screenshot</h4>
-<img src="https://www.google.com/search?q=https://raw.githubusercontent.com/EhudSicron/pom-orders/main/images/allure-report-screenshot.png" alt="Allure Report Screenshot" width="700"/>
+<img src="https://github.com/EhudSicron/pom-orders/blob/main/img/Allure_report.PNG" alt="Allure Report Screenshot" width="700"/>
 </div>
 
 ⭐ Get Involved
@@ -113,5 +113,6 @@ Connect with me on LinkedIn: https://www.linkedin.com/in/ehud-sicron/
 
 
 Learn more about automation: https://automation.co.il/
+
 
 
