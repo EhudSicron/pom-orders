@@ -1,10 +1,10 @@
 name: automation demo
 
 on:
-  workflow_dispatch:          # manual trigger only
+  workflow_dispatch:        # manual trigger only
 
 permissions:
-  contents: write  # מאפשר push ל-gh-pages
+  contents: write  # Allows push to gh-pages
 
 jobs:
   merge_test:
@@ -13,18 +13,19 @@ jobs:
     timeout-minutes: 15
 
     container:
-      image: mcr.microsoft.com/playwright:v1.55.0   # browsers + xvfb pre‑installed
+      # Use the Playwright image which includes browsers and Xvfb
+      image: mcr.microsoft.com/playwright:v1.55.0
 
     steps:
-      # 1 Check out code
+      # 1 Check out code
       - uses: actions/checkout@v4
 
-      # 2 Set up Python
+      # 2 Set up Python
       - uses: actions/setup-python@v5
         with:
           python-version: "3.13"
 
-      # 3 Create venv & install deps with pip
+      # 3 Create venv & install deps with pip
       - name: Install dependencies
         shell: bash
         run: |
@@ -32,16 +33,17 @@ jobs:
           source .venv/bin/activate
           pip install --upgrade pip
           pip install -r requirements.txt
+          # Assumes 'pytest-playwright' is in requirements.txt
 
-      # 4 Run pytest under xvfb, save Allure results
-  # xvfb-run pytest -m devRun --alluredir=allure-results
-      - name: Test with pytest
+      # 4 Run pytest under xvfb, record video for ALL tests, save Allure results
+      - name: Test with pytest & Record Video
         shell: bash
         run: |
           source .venv/bin/activate
-          xvfb-run pytest --alluredir=allure-results
+          # CHANGED: '--video=on' records and keeps video for every test (success or failure)
+          xvfb-run pytest --alluredir=allure-results --video=on
 
-      # 5 Write build/git metadata into Allure
+      # 5 Write build/git metadata into Allure
       - name: Add metadata to Allure
         if: always()
         working-directory: allure-results
@@ -56,7 +58,17 @@ jobs:
             echo CHROME_VERSION=$(google-chrome --product-version)
           } >> environment.properties
 
-      # 6 Generate static Allure report
+      # 6 Upload videos as artifacts
+      # Videos are typically saved to the 'test-results/' directory by default.
+      - name: Upload Test Videos Artifact
+        uses: actions/upload-artifact@v4
+        # Since video is now 'on', we use 'always()' to ensure all videos are uploaded
+        if: always() 
+        with:
+          name: all-test-videos
+          path: test-results/
+
+      # 7 Generate static Allure report
       - name: Generate Allure report
         uses: simple-elf/allure-report-action@master
         if: always()
@@ -66,7 +78,7 @@ jobs:
           gh_pages:       gh-pages
           allure_history: allure-history
 
-      # 7 Publish Allure history to GitHub Pages
+      # 8 Publish Allure history to GitHub Pages
       - name: Deploy report to GitHub Pages
         if: always()
         uses: peaceiris/actions-gh-pages@v4
