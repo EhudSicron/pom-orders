@@ -1,7 +1,0 @@
-SETUP #####################  SETUP ###########
-start url
-/__w/pom-orders/pom-orders
-/__w/pom-orders/pom-orders/tests/config.ini
-https://www.saucedemo.com/inventory.html
-https://www.saucedemo.com/inventory.html
-Selected sort option: Price (high to low)
