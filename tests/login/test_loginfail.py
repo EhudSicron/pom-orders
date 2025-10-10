@@ -7,7 +7,7 @@ from tests.basetest import Basetest
 
 
 class TestLoginFail(Basetest):
-    with open("tests\login_data.json", "r") as f:
+    with open("tests/login_data.json", "r") as f:
         raw_data = json.load(f)
         test_data = [(d["username"], d["password"]) for d in raw_data]
     @pytest.mark.parametrize("user,password", test_data)
@@ -27,3 +27,4 @@ class TestLoginFail(Basetest):
         #print(f"error:{error}")
         log_test += f"error:{error}\n"
         assert "Username and password do not match any user in this service" in error, f"Error is empty - login didn't fails : {error}\n User:{user}, Password: {password}"
+
