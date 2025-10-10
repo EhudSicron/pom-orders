@@ -121,6 +121,8 @@ Allure Report (Live): https://ehudsicron.github.io/pom-orders/
 <h4>Allure Report Screenshot</h4>
 <img src="https://github.com/EhudSicron/pom-orders/blob/main/img/Allure_report.PNG" alt="Allure Report Screenshot" width="700"/>
 </div>
+
+![test-22-checkout-2prod-flow-video](https://github.com/user/repo/assets/12345/abcdef-1234-5678-90ab-cdef01234567)
 <video controls class="w-full h-auto rounded-lg shadow-md mb-6 mx-auto max-w-xs">
 <source src="img/test-22-checkout-2prod-flow-video.mp4" type="video/mp4">
 Your browser does not support the video tag.
@@ -137,6 +139,7 @@ Connect with me on LinkedIn: https://www.linkedin.com/in/ehud-sicron/
 
 
 Learn more about automation: https://automation.co.il/
+
 
 
 
