@@ -121,6 +121,10 @@ Allure Report (Live): https://ehudsicron.github.io/pom-orders/
 <h4>Allure Report Screenshot</h4>
 <img src="https://github.com/EhudSicron/pom-orders/blob/main/img/Allure_report.PNG" alt="Allure Report Screenshot" width="700"/>
 </div>
+<video controls class="w-full h-auto rounded-lg shadow-md mb-6 mx-auto max-w-xs">
+<source src="img/test-22-checkout-2prod-flow-video.mp4" type="video/mp4">
+Your browser does not support the video tag.
+</video>
 
 ⭐ Get Involved
 If you're a fellow automation enthusiast or a company looking for a robust testing solution, this project is for you!
@@ -133,6 +137,7 @@ Connect with me on LinkedIn: https://www.linkedin.com/in/ehud-sicron/
 
 
 Learn more about automation: https://automation.co.il/
+
 
 
 
