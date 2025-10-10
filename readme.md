@@ -128,6 +128,10 @@ Allure Report (Live): https://ehudsicron.github.io/pom-orders/
 Your browser does not support the video tag.
 </video>
 
+
+https://github.com/user-attachments/assets/62d78a19-9c65-480d-a646-7061d9b62600
+
+
 ⭐ Get Involved
 If you're a fellow automation enthusiast or a company looking for a robust testing solution, this project is for you!
 
@@ -139,6 +143,7 @@ Connect with me on LinkedIn: https://www.linkedin.com/in/ehud-sicron/
 
 
 Learn more about automation: https://automation.co.il/
+
 
 
 
