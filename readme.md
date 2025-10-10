@@ -122,10 +122,12 @@ Allure Report (Live): https://ehudsicron.github.io/pom-orders/
 <img src="https://github.com/EhudSicron/pom-orders/blob/main/img/Allure_report.PNG" alt="Allure Report Screenshot" width="700"/>
 </div>
 
+
+
+
+
 <h4> Video - Test flow add 2 products and remove </h4>
-
-
-https://github.com/user-attachments/assets/62d78a19-9c65-480d-a646-7061d9b62600
+https://github.com/user-attachments/assets/ec906c40-266e-4a38-9c99-d3dcf73d1ad3
 
 
 ⭐ Get Involved
@@ -139,6 +141,7 @@ Connect with me on LinkedIn: https://www.linkedin.com/in/ehud-sicron/
 
 
 Learn more about automation: https://automation.co.il/
+
 
 
 
